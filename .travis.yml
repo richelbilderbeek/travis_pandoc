@@ -1,0 +1,12 @@
+sudo: require
+
+install:
+  # LyX
+  - sudo add-apt-repository -y ppa:lyx-devel/release
+  - sudo apt-get update -qq
+  - sudo apt-get install lyx
+
+script:
+  - lyx --export pdf travis_lyx.lyx
+  # Check if the PDF has been created
+  - if [ ! -e travis_lyx.pdf ]; then exit 1; fi
