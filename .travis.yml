@@ -2,6 +2,6 @@ install:
   - sudo apt-get install pandoc texlive-latex-recommended
 
 script:
-  - pandoc README.md -o my_pdf.pdf
+  - pandoc example.md -o my_pdf.pdf
   # Check if the PDF has been created
   - if [ ! -e my_pdf.pdf ]; then exit 1; fi
