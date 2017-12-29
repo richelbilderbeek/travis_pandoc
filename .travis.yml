@@ -1,5 +1,5 @@
 install:
-  - sudo apt-get install pandoc
+  - sudo apt-get install pandoc pdflatex
 
 script:
   - pandoc README.md -o my_pdf.pdf
