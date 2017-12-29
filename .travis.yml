@@ -1,5 +1,5 @@
 install:
-  - sudo apt-get install pandoc texlive-latex-recommended
+  - sudo apt-get install pandoc texlive-latex-recommended texlive-latex-extra
 
 script:
   - pandoc example.md -o my_pdf.pdf
